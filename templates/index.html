@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareAI - Your Intelligent Healthcare Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1><span class="blue">Care</span><span class="white">AI</span></h1>
+        <nav>
+            {% if username %}
+                <span>Welcome, {{ username }}!</span>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <div id="root">
+        <div class="container">
+            <main>
+                <div class="grid">
+                    <!-- Box 1 -->
+                    <div class="box">
+                        <div class="icon">💬</div>
+                        <h3>Chat with Care AI</h3>
+                        <p>Your personal health assistant powered by RAG technology. Get reliable answers to all your health queries from our comprehensive medical knowledge base! 🤖 Access real-time health information with multi-agent verification.</p>
+                        <a href="https://chatai28.streamlit.app/" target="_blank"><button>Open</button></a>
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="box">
+                        <div class="icon">📑</div>
+                        <h3>Report Analysis</h3>
+                        <p>Upload your medical reports and get instant interpretations! Our advanced OCR technology reads and analyzes your health documents to provide clear insights and guidance. 📊 Supported by real-time medical database access.</p>
+                        <a href="https://report28.streamlit.app/" target="_blank"><button>Open</button></a>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="box">
+                        <div class="icon">🚑</div>
+                        <h3>Emergency Assistant</h3>
+                        <p>Emergency Assistant
+                            Quick access to emergency services with real-time location tracking and instant hospital notifications. Share health details and get immediate assistance! 🚑 Integrated with ambulance services for rapid response.</p>
+                        <a href="https://careai-3.streamlit.app/" target="_blank"><button>Open</button></a>
+                    </div>
+
+                    <!-- Box 4 -->
+                    <div class="box">
+                        <div class="icon">🔬</div>
+                        <h3>Disease Prediction</h3>
+                        <p>Advanced AI-powered disease prediction system using machine learning models. Input your symptoms and get instant health insights! 🔍 Supports various conditions including Blood Pressure, Blood Sugar, and COVID-19 prediction.</p>
+                        <a href="https://careai2.streamlit.app/" target="_blank"><button>Open</button></a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
